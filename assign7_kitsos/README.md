@@ -16,7 +16,7 @@ Turn ASLR off so address env variable address doesn't change
 Command: sudo bash -c 'echo 0 > /proc/sys/kernel/randomize_va_space'  
 NOTE: 0 - disables randomization and 2 - enables randomization  
 
-Spawn a bind shell by running the run.sh script 
+Spawn a bind shell by executing the run script.  
 Command: sh run.sh  
 
 NOTE: The memory addresses used for the attack are encoded in little endian and may require some tweaking. Specifically, the estimated payload address should match that of PAY_ADDR defined in run.sh, otherwise it needs to be found using GDB.
