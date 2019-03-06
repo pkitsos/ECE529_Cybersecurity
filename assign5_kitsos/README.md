@@ -1,8 +1,8 @@
 # Assignment 5: Binary Analysis
-University of New Mexico - Dept. Electrical and Computer Engineering
-ECE 529: Intro to Technical Cybersecurity
-Prof: Dr. Lamb - Author: Panayioti Kitsos 
-Spring 2019
+University of New Mexico - Dept. Electrical and Computer Engineering  
+ECE 529: Intro to Technical Cybersecurity  
+Prof: Dr. Lamb - Author: Panayioti Kitsos   
+Spring 2019  
 
 ## ** DISCLAIMER **
 This project is meant for educational purposes only and is not to be misused in any manner. We assume no responsibility for the misuse of this project. 
